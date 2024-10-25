@@ -70,7 +70,7 @@ export default function Navbar() {
 
            
            <div className="d-flex">
-            <button onClick={login_popup} className="login01 btn btn-danger me-2" style={{ marginLeft: '2rem'}}>Login</button>
+            <button onClick={login_popup} className="login01 btn btn-danger me-2">Login</button>
            </div>
 
         </div>
@@ -92,19 +92,20 @@ export default function Navbar() {
                             </div>
 
                             <div className="modal-body">
+
                                 <form id="donorForm">
                                     <div className="mb-3">
                                         <label htmlFor="donorName" className="form-label">Name</label>
-                                        <input type="text" className="form-control" id="donorName" placeholder="Enter your name" />
+                                        <input type="text" className="form-control" id="donorName" placeholder="Enter your name" required onkey/>
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="donorMobile" className="form-label">Mobile</label>
-                                        <input type="tel" className="form-control" id="donorMobile" placeholder="Enter your mobile number" />
+                                        <input type="tel" className="form-control" id="donorMobile" placeholder="Enter your mobile number" required/>
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="donorGender" className="form-label">Gender</label>
-                                        <select className="form-select" id="donorGender">
-                                            <option selected>Select your gender</option>
+                                        <select className="form-select" id="donorGender" required>
+                                            <option value=''>Select your gender</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
                                             <option value="Other">Other</option>
@@ -112,8 +113,8 @@ export default function Navbar() {
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="donorBloodGroup" className="form-label">Blood Group</label>
-                                        <select className="form-select" id="donorBloodGroup">
-                                            <option selected>Select your blood group</option>
+                                        <select className="form-select" id="donorBloodGroup" required>
+                                            <option value=''>Select your blood group</option>
                                             <option value="A+">A+</option>
                                             <option value="A-">A-</option>
                                             <option value="B+">B+</option>
@@ -127,12 +128,15 @@ export default function Navbar() {
 
                                     <div className="modal-footer">
                                         <button type="button" className="btn btn-secondary" onClick={closeDonorPopup}>Close</button>
-                                        <button type="submit" className="btn btn-primary">Next</button>
+                                        <button className="btn btn-primary">Next</button>
                                     </div>
-                                </form>
+                                  </form>
+
                                 <div className="text-center mt-3">
                                     <span>Already have an account? <a className="nav-link" href="/#" onClick={login_popup}> <p style={{ color: 'red' }}>Sign in</p> </a></span>
                                 </div>
+                                
+
                             </div>
                         </div>
                     </div>
@@ -156,20 +160,22 @@ export default function Navbar() {
             <form id="loginForm">
               <div className="mb-3">
                 <label htmlFor="loginEmail" className="form-label">Email</label>
-                <input type="email" className="form-control" id="loginEmail" placeholder="Enter your email" />
+                <input type="email" className="form-control" id="loginEmail" placeholder="Enter your email" required/>
               </div>
               <div className="mb-3">
                 <label htmlFor="loginPassword" className="form-label">Password</label>
-                <input type="password" className="form-control" id="loginPassword" placeholder="Enter your password" />
+                <input type="password" className="form-control" id="loginPassword" placeholder="Enter your password" required />
               </div>
               <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" onClick={closeLogPopup}>Close</button>
                 <button type="submit" className="btn btn-primary">Login</button>
               </div>
-            </form>
+            
             <div className="text-center mt-3">
               <span>Don't have an account? <a className="nav-link" href="/#" onClick={donor_popup}><p style={{ color: 'red' }}>Sign up</p></a></span>
             </div>
+
+            </form>
           </div>
         </div>
       </div>

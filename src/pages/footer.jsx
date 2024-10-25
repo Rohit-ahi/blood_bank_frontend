@@ -27,7 +27,8 @@ export default function Footer() {
         </div>
       </div>
     </div>
-  </section>
+    </section>
+    <hr />
            
   <section class="footer-widget-area footer-widget-area-bg">
     <div class="container">
@@ -50,6 +51,7 @@ export default function Footer() {
     </div>
   </section>
 
+ 
 </footer>
   
     </>

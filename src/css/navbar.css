@@ -1,18 +1,19 @@
 
 
 
-
 .navbar {
     background-color: #ffffff;
     border-bottom: 1px solid #dee2e6;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1px 0; /* Reduces the navbar height */
     background: linear-gradient(90deg, #fcfbfb 0%, #ffffff 100%);
+    overflow: hidden;
   }
   
   .navbar-brand img.logo {
-    width: 100px;
-    height: auto;
+    width: 130px;
+    height: 90px; /* Apni desired image height set karein */
+    object-fit: contain; 
   }
   
   .navbar-nav {
@@ -31,8 +32,10 @@
   }
   
   .d-flex .login01 {
-    font-size: 1rem;
+    font-size: 1rem; 
     font-weight: bold;
+    margin-right: 1rem;
+    margin-left: 1.5rem;
   }
   
   
@@ -55,8 +58,6 @@
    
 
 
-
-
 /*  
 @media (max-width: 992px) {
   .navbar-nav .nav-item .nav-link{
@@ -74,8 +75,6 @@
     padding: 8px 0; 
   }
 } */
-
-
 
 
 

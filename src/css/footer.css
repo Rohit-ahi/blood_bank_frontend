@@ -1,115 +1,117 @@
 
 
 
+/* Main Footer Styles */
+footer {
+  background-color: #222; /* Dark background for the footer */
+  color: #fff;
+  padding: 40px 0;
+}
 
-/* footer_1 */
-.red_bg {
-  background-color: #282828;; /* Professional tomato red */
-  padding: 50px 0; /* Padding for spacing */
-  height: 7rem;
+.change {
+  padding: 20px 0;
 }
 
 .change_content h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .change_content p {
-  font-size: 1.1rem;
-  color: #f8f9fa;
+  font-size: 16px;
   line-height: 1.6;
 }
-/* 
-.btn-primary {
-  display: inline-block;
-  padding: 12px 25px;
-  background-color: #787c81; 
-  color: #fff;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+
+.btn-danger {
+  padding: 10px 20px;
+  font-size: 16px;
 }
 
-.btn-primary:hover {
-  background-color: #bfc7ce;
-} */
+/* Footer Widget Area */
+.footer-widget-area {
+  padding: 40px 0;
+  background-color: #222;
+}
+
+.about-footer {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.footer-logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-description {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 16px;
+  color: #ccc;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .change_content h2 {
+    font-size: 24px;
+  }
+
+  .btn-danger {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
 
 @media (max-width: 768px) {
   .change_content h2 {
-    font-size: 2rem; /* Smaller heading for mobile */
+    font-size: 22px;
   }
 
-  .btn-primary {
-    font-size: 0.9rem;
+  .change_content p {
+    font-size: 14px;
+  }
+
+  .footer-description {
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px; /* Adding space between logo and description */
+  }
+
+  .btn-danger {
+    font-size: 14px;
     padding: 10px 20px;
   }
+
+  .change_content, .footer-description {
+    text-align: center; /* Center align text for smaller screens */
+  }
+
+  .change .row {
+    text-align: center;
+  }
 }
- 
 
-  
-  /* footer_2 */
+@media (max-width: 576px) {
+  .change_content h2 {
+    font-size: 20px;
+  }
 
-  .footer-widget-area {
-    background-color: #282828;
-    padding: 50px 0;
-    color: #ffffff;
+  .btn-danger {
+    padding: 8px 18px;
+    font-size: 13px;
   }
-  
-  .footer-logo {
-    max-width: 150px;
-  }
-  
+
   .footer-description {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-top: 10px;
-    color: #cccccc;
+    font-size: 13px;
   }
-  
-  /* Footer Links (if needed later) */
-  .footer-links {
-    margin-top: 20px;
+
+  .footer-logo {
+    width: 70%; /* Smaller logo on mobile */
   }
-  
-  .footer-links a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 15px;
-    font-size: 16px;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-links a:hover {
-    color: #d9534f;
-  }
-  
-  /* Add Padding and Space */
-  .about-footer {
-    padding-top: 30px;
-    border-top: 1px solid #444444;
-    margin-top: 30px;
-  }
-  
-  .about-footer p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .footer-description {
-      font-size: 14px;
-    }
-  
-    .footer-logo {
-      max-width: 120px;
-    }
-  }
-  
-  
-  
-  
+}
