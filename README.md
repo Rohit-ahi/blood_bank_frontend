@@ -1,5 +1,69 @@
-# Getting Started with Create React App
 
+## Setup Instructions
+
+### Prerequisites:
+- Node.js और npm इंस्टॉल होना चाहिए।
+- MySQL Server कॉन्फ़िगर्ड होना चाहिए।
+
+### Steps to Run:
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/Rohit-ahi/blood_bank_frontend.git
+   ```
+2. **Navigate to the Project Directory:**
+   ```bash
+   cd donor_app
+   ```
+3. **Install Dependencies:** 
+   ```bash
+   npm install
+   ```
+4. **Run the Development Server:**
+   ```bash
+   npm start
+   ```
+
+## Project Overview :
+
+Blood Donor App एक ऐसा प्लेटफ़ॉर्म है जो ब्लड डोनर्स और ब्लड रिक्वेस्टर्स को एक साथ लाने का काम करता है।
+
+- **Features:**
+  - Donors को रजिस्टर और मैनेज करना
+  - Blood requests को ट्रैक करना
+  - User-friendly interface के साथ आसानी से नेविगेशन
+
+
+## Technologies Used :
+
+- **Frontend:** React.js, Bootstrap, CSS3
+- **Backend:** Node.js, Express.js
+- **Database:** MySQL
+- **State Management:** Redux
+
+
+
+
+## Folder Structure
+
+donor_app/
+├── public/
+├── src/
+│   ├── components/     # Reusable Components
+│   ├── pages/          # Page Components
+│   ├── redux/          # Redux Store and Slices
+│   └── css/            # CSS Files
+├── package.json
+├── .env
+└── README.md
+
+
+
+
+
+
+
+
+# Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

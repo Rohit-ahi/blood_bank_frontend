@@ -2,19 +2,26 @@
 
 import React from 'react'
 import { useState } from 'react'
-import  Modal  from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
+import {Modal , Button} from 'react-bootstrap'
+import '../css/hero.css'
+
 
 export default function Hero() {
 
      const[reqpopup,setreqpopup] = useState(false)
+
+     console.log('reqpopup',reqpopup)
 
      const[lat,setlat] = useState('')
      const[long,setlong] = useState('')
 
      const[mapurl,setmapurl] = useState('')
   
-    const reqblood = ()=>setreqpopup(true)
+    const reqblood = (e)=>{
+      e.preventDefault()
+      setreqpopup(true)
+      e.target.reset()
+    }
     const reqClose = ()=>setreqpopup(false)
      
 
@@ -38,20 +45,22 @@ export default function Hero() {
   return (
     <>
 
-    <div class="hero01  text-white text-center py-5"  style={{ backgroundImage: "url('/images/banner5.jpg')",backgroundSize: 'cover',height:'23rem'}}>
+    <div className="hero01  text-white text-center py-5"  style={{ backgroundImage: "url('/images/banner5.jpg')",backgroundSize: 'cover'}}>
+
     <h1>Donate Blood, Save Lives</h1>
-    <p class="p">Your donation can give someone a second chance at life.</p>
-    <main class="main01">
-      <div class="container mt-5" >
-        <form class="row g-2">
-          <div class="col-sm">
-            <input type="text" class="name form-control" placeholder="Name" required/>
+    <p className="p">Your donation can give someone a second chance at life.</p>
+    <main className="main05">
+      <div className="container mt-5" >
+      <form onSubmit={reqblood}>
+        <div className="row g-2">
+          <div className="col-sm">
+            <input type="text" className="abc form-control" placeholder="Name" required/>
           </div>
-          <div class="col-sm">
-            <input type="number" class="name form-control" placeholder="Mobile" maxlength="10"/>
+          <div className="col-sm">
+            <input type="number"className=" abc form-control" placeholder="Mobile" maxlength="10" required/>
           </div>
-          <div class="col-sm">
-            <select class="name form-control">
+          <div className="col-sm">
+            <select className=" abc form-control" required>
               <option value="">Blood Group</option>
               <option value="A+">A+</option>
               <option value="A-">A-</option>
@@ -63,15 +72,16 @@ export default function Hero() {
               <option value="O-">O-</option>
             </select>
           </div>
-          <div class="col-auto">
-            <button onClick={reqblood} type="submit" class="req_blood btn btn-danger" style={{fontWeight:'bold',fontFamily:'sans-serif', marginLeft: '20px'}}>Req Blood</button>
+          <div className="col-auto">
+            <button className=" tb0 btn" type='submit'>Req Blood</button>
           </div>
-        </form>
-      </div>
-    </main>
-  </div>
+        </div>
+      </form>
 
-  {/* ********* */}
+    </div>
+  </main>
+
+  </div>
 
      <Modal show={reqpopup} onHide={reqClose}>
         <Modal.Header closeButton>
@@ -85,7 +95,7 @@ export default function Hero() {
             </div>
             <div className="mb-3">
               <label htmlFor="address" className="form-label">Address</label>
-              <input type='text' className="form-control" id="address" rows="2" required></input>
+              <input type='text' className="form-control" id="address" rows="2" required />
             </div>
 
             <div className="mb-3">
@@ -140,14 +150,11 @@ export default function Hero() {
             Submit Request
           </Button>
         </Modal.Footer>
+        
         </form>
 
         </Modal.Body>
       </Modal> 
-
-      {/* *********** */}
-
-     
 
     </>
   )

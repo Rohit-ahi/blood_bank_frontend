@@ -1,16 +1,15 @@
 
-
-
-
-.hero01 {
-     /* position: relative;  */
+ /* Hero section styling */
+ 
+ .hero01 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 0;
-  }
+    /* background-image: url('/images/background.webp'); */
+  } 
   
-  .hero01 h1 {
+   .hero01 h1 {
     font-size: 48px;
     font-weight: bold;
     color: #fff;
@@ -23,7 +22,7 @@
     color: #fff;
   }
   
-  form .form-name {
+  form .abc {
     border: 2px solid #ced4da;
     padding: 10px 15px;
     font-size: 16px;
@@ -32,34 +31,46 @@
     background-color: #f8f9fa;
   }
   
-  form .form-name:focus {
+  form .abc:focus {
     border-color: #857b7b;
     background-color: #fff;
     box-shadow: 0 0 8px rgba(211, 233, 255, 0.25);
   }
   
-  select.form-name {
+  select.abc {
     appearance: none;
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 12px;
   }
+    
   
-
-  form .req_blood:hover {
-    background-color: #92221e;
+  form .tb0 {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color:white;
+    font-weight: bold;
   }
-
-  form .row .col-sm, form .row .col-auto {
+  
+  form .tb0:hover {
+    background-color: #c9302c;
+    border-color: #ac2925;
+  }
+  
+  
+   form .row .col-sm, form .row .col-auto {
     margin-bottom: 10px;
-  }
-
-  
-  .main01 {
+  } 
+   
+   .main05 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
+  } 
 
   
+
